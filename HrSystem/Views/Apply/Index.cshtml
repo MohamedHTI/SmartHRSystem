@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<h1 style="color:white;">Avaliable Positions:</h1>
+<br />
+<h3 style="color:white;">Apply For A Driver Position</h3>
+<input type="button" class="btn btn-danger btn" value="Apply Now" onclick="location.href='@Url.Action("CarJob", "Apply")'" />
+<br />
+<div style="float:right;" class="resize">
+    <img src="~/Content/walls_hero@2x_2.png" />
+</div>
+
+<h3 style="color:white;">Apply For An IT Professoinal Position</h3>
+<input type="button" class="btn btn-danger btn" value="Apply Now" onclick="location.href='@Url.Action("ITJob", "Apply")'" />

@@ -1,0 +1,57 @@
+﻿@model IEnumerable<HrSystem.Models.Vacancy>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2 style="color:white;">Index</h2>
+
+<p>
+    <button class="btn btn-danger btn" onclick="location.href='@Url.Action("Create", "Vacancies")';return false;">Create</button>
+
+</p>
+<table class="table">
+    <tr>
+        <th style="color:white;">
+            @Html.DisplayNameFor(model => model.JobTitle)
+        </th>
+        <th style="color:white;">
+            @Html.DisplayNameFor(model => model.JobType)
+        </th>
+        <th style="color:white;">
+            @Html.DisplayNameFor(model => model.JobDescreption)
+        </th>
+        <th style="color:white;">
+            @Html.DisplayNameFor(model => model.MaxAge)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td style="color:white;">
+            @Html.DisplayFor(modelItem => item.JobTitle)
+        </td>
+        <td style="color:white;">
+            @Html.DisplayFor(modelItem => item.JobType)
+        </td>
+        <td style="color:white;">
+            @Html.DisplayFor(modelItem => item.JobDescreption)
+        </td>
+        <td style="color:white;">
+            @Html.DisplayFor(modelItem => item.MaxAge)
+        </td>
+        <td>
+
+            <button class="btn btn-danger btn" onclick="location.href='@Url.Action("Edit", "Vacancies")';return false;">Edit</button>
+            |
+            <button class="btn btn-danger btn" onclick="location.href='@Url.Action("Details", "Vacancies")';return false;">Details</button>
+            |
+            <button class="btn btn-danger btn" onclick="location.href='@Url.Action("DeleteJob", "Vacancies")';return false;">Delete</button>
+
+
+        </td>
+    </tr>
+}
+
+</table>
